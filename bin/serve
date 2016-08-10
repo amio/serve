@@ -1,25 +1,20 @@
 #!/usr/bin/env node
 
-/**
- * Module dependencies.
- */
-
 var resolve = require('path').resolve
-  , join = require('path').join
-  , exec = require('child_process').exec
-  , program = require('commander')
-  , connect = require('connect')
-  , morgan = require('morgan')
-  , compression = require('compression')
-  , serveFavicon = require('serve-favicon')
-  , serveStatic = require('serve-static')
-  , serveIndex = require('serve-index')
-  , basicAuth = require('basic-auth-connect')
-  , open = require('opn')
-  , url = require('url')
-  , fs = require('fs')
-  , https = require('https');
-
+var join = require('path').join
+var exec = require('child_process').exec
+var program = require('commander')
+var connect = require('connect')
+var morgan = require('morgan')
+var compression = require('compression')
+var serveFavicon = require('serve-favicon')
+var serveStatic = require('serve-static')
+var serveIndex = require('serve-index')
+var basicAuth = require('basic-auth-connect')
+var open = require('opn')
+var url = require('url')
+var fs = require('fs')
+var https = require('https')
 var serveHTTPS = require('../lib/https.js')
 
 // CLI
@@ -38,7 +33,7 @@ program
   .option('-L, --no-logs', 'disable request logging')
   .option('-D, --no-dirs', 'disable directory serving')
   .option('-f, --favicon <path>', 'serve the given favicon')
-  .option('-C, --cors', 'allows cross origin access serving')
+  .option('-c, --cors', 'allows cross origin access serving')
   .option('-s, --https', 'also serve over https')
   .option('    --key', 'key file path for https')
   .option('    --cert', 'certificate file for https')
