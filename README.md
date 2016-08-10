@@ -1,20 +1,21 @@
 # @amio/serve [![npm-version][npm-badge]][npm-link]
 
-Handy http/https server, inspired by nodejitsu's [http-server](https://github.com/nodejitsu/http-server) to show off the simplicity and flexibility of connect as a modular server.
+Handy http/https server, evolved from TJ's original [serve](https://github.com/tj/serve), which inspired by nodejitsu's [http-server](https://github.com/nodejitsu/http-server).
 
-> Original `serve` is awesome, but seems lacks of maintenance by now,
+> Original `serve` is awesome, but seems lacks of maintenance these days,
 > there's some useful fixes & features added to the codebase
-> [since](https://github.com/tj/serve/compare/1.4.0...master) it's latest release in Mar, 2014.  
-> So here is an ongoing `serve`, and also an opinionated `serve`,
+> [since](https://github.com/tj/serve/compare/1.4.0...master) it's
+> latest release in Mar 2014, but couldn't get landed to users,
+> it's more than two years by now.  
+> So here is this ongoing `serve`, and also an opinionated `serve`,
 > which removed support for jade and stylus, for a much smaller installation footprint.
 
 **Difference with `serve`**:
 
 - Doesn't support jade and stylus ([Opinionated](https://github.com/amio/serve/issues/2)),
-- Then comes smaller footprint ([1.8M vs 15M](https://github.com/amio/serve/issues/2#issuecomment-238825598)).
-- Features
-  - `-o, --open` opens a browser window to this server
-  - `-s, --https` also serve over https
+- so comes minimal installation footprint ([1.8M vs 15M](https://github.com/amio/serve/issues/2#issuecomment-238825598)).
+- `-o, --open` opens a browser window to this server.
+- `-s, --https` also serve over https.
 
 ## Installation
 
@@ -54,11 +55,12 @@ HTTP Accept support built into `connect.directory()`:
 
 ```bash
 $ curl http://localhost:3000/ -H "Accept: text/plain"
-    bin
-    History.md
-    node_modules
-    package.json
-    Readme.md
+
+  bin
+  History.md
+  node_modules
+  package.json
+  Readme.md
 ```
 
 Requesting a file:
@@ -70,11 +72,11 @@ Requesting JSON for the directory listing:
     $ curl http://localhost:3000/ -H "Accept: application/json"
     ["bin","History.md","node_modules","package.json","Readme.md"]
 
-Directory listing served by connect's `connect.directory()` middleware.
+Directory listing served by [serve-index](https://github.com/expressjs/serve-index) middleware.
 
 ## License
 
-MIT License (c) 2011 TJ Holowaychuk &lt;tj@vision-media.ca&gt;
+MIT License (c) 2011 TJ Holowaychuk
 
 [npm-badge]: https://img.shields.io/npm/v/@amio/serve.svg?style=flat-square
 [npm-link]: http://www.npmjs.com/package/@amio/serve
