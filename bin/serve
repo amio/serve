@@ -44,7 +44,6 @@ program
 
 // path
 var path = resolve(program.args.shift() || '.');
-path = path + "/" + program.root;
 
 // setup the server
 var server = connect();

@@ -33,7 +33,6 @@ Options:
   -a, --auth <user>:<pass>  specify basic auth credentials
   -F, --format <fmt>        specify the log format string
   -p, --port <port>         specify the port [3000]
-  -r, --root <root>         specify the root directory []
       --https-port <port>   specify the port [3443]
   -H, --hidden              enable hidden file serving
   -I, --no-icons            disable icons
