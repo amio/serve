@@ -57,7 +57,7 @@ if (program.auth) {
 }
 
 // ignore favicon
-server.use(serveFavicon(program.favicon || join(__dirname, '../favicon.ico')));
+server.use(serveFavicon(program.favicon || join(__dirname, '../static/favicon.ico')));
 
 // logger
 if (program.logs) server.use(morgan(program.format));
