@@ -1,6 +1,6 @@
 {
   "name": "@amio/serve",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "Simple command-line file / directory server built with connect",
   "bin": {
     "serve": "./bin/serve"
