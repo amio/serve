@@ -170,7 +170,7 @@ if (program.https) {
 
     // start the http server
     httpsServer.listen(program.httpsPort, function () {
-      console.log('\033[90mserving \033[36m%s\033[90m on port \033[96m%d\033[0m', path, program.httpsPort);
+      console.log('\033[90mServing \033[36m%s\033[90m on port \033[96m%d\033[0m', path, program.httpsPort);
     });
   };
 
@@ -237,7 +237,13 @@ function launch (port) {
     console.log('\033[90mServing \033[36m%s\033[90m on port \033[96m%d\033[0m', path, port);
 
     // open the browser window to this server
-    program.open && open('http://127.0.0.1:' + port);
+    if (program.open) {
+      if (program.https) {
+        open('https://127.0.0.1:' + program.httpsPort)
+      } else {
+        open('http://127.0.0.1:' + port)
+      }
+    }
   }).on('error', onError);
 }
 
