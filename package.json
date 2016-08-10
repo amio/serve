@@ -14,13 +14,11 @@
     "commander": "2.9.0",
     "compression": "^1.6.2",
     "connect": "3.4.x",
-    "less-middleware": "2.1.x",
     "morgan": "^1.7.0",
     "opn": "4.0.x",
     "serve-favicon": "2.3.x",
     "serve-index": "1.8.x",
-    "serve-static": "1.11.x",
-    "stylus": "*"
+    "serve-static": "1.11.x"
   },
   "keywords": [
     "static",

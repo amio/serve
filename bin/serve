@@ -16,8 +16,6 @@ var resolve = require('path').resolve
   , serveIndex = require('serve-index')
   , basicAuth = require('basic-auth-connect')
   , open = require('opn')
-  , stylus = require('stylus')
-  , less = require('less-middleware')
   , url = require('url')
   , fs = require('fs')
   , https = require('https');
@@ -36,8 +34,6 @@ program
   .option('-r, --root <root>', 'specify the root directory []', String, "")
   .option('    --https-port <port>', 'specify the port [3443]', Number, 3443)
   .option('-H, --hidden', 'enable hidden file serving')
-  .option('-S, --no-stylus', 'disable stylus rendering')
-  .option('    --no-less', 'disable less css rendering')
   .option('-I, --no-icons', 'disable icons')
   .option('-L, --no-logs', 'disable request logging')
   .option('-D, --no-dirs', 'disable directory serving')
@@ -59,7 +55,6 @@ path = path + "/" + program.root;
 var server = connect();
 
 // basic auth
-
 if (program.auth) {
   var user = program.auth.split(':')[0];
   var pass = program.auth.split(':')[1];
@@ -72,22 +67,6 @@ server.use(serveFavicon(program.favicon || join(__dirname, '../favicon.ico')));
 
 // logger
 if (program.logs) server.use(morgan(program.format));
-
-// convert .styl to .css to trick stylus.middleware
-if (program.stylus) {
-  server.use(function(req, res, next){
-    req.url = req.url.replace(/\.styl$/, '.css');
-    next();
-  });
-}
-
-// stylus
-server.use(stylus.middleware({ src: path }));
-
-// less
-if (program.less) {
-  server.use(less(path));
-}
 
 // CORS access for files
 if (program.cors) {
