@@ -1,21 +1,28 @@
+2.0.0 / 2016-08-10
+==================
+
+ * Removed: jade support
+ * Removed: stylus support
+ * Added: `-s, --https` https support
+ * Added: `-o, --open` opens a browser window to this server
 
 1.4.0 / 2014-03-13
 ==================
 
- * add --auth for basic authentication
- * fix: less-middleware call, path is required as first argument
- * fix: self-reported version match package.json
+ * Added: --auth for basic authentication
+ * Fixed: less-middleware call, path is required as first argument
+ * Fixed: self-reported version match package.json
 
 1.3.0 / 2013-07-04
 ==================
 
- * add --compress
+ * Added: --compress
 
 1.2.0 / 2013-02-06
 ==================
 
-  * add CORS CLI flag and middleware.
-  * add LESS
+  * Added: CORS CLI flag and middleware.
+  * Added: LESS
   * 0.8.x compat
 
 1.1.0 / 2012-06-14
