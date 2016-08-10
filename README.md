@@ -11,7 +11,7 @@ Handy http/https server, inspired by nodejitsu's [http-server](https://github.co
 **Difference with `serve`**:
 
 - Doesn't support jade and stylus ([Opinionated](https://github.com/amio/serve/issues/2)),
-- Then comes smaller footprint ([1.5M vs 15M](https://github.com/amio/serve/issues/2)).
+- Then comes smaller footprint ([1.8M vs 15M](https://github.com/amio/serve/issues/2#issuecomment-238825598)).
 - Features
   - `-o, --open` opens a browser window to this server
   - `-s, --https` also serve over https
