@@ -1,16 +1,13 @@
 {
-  "name": "serve",
+  "name": "@amio/serve",
   "version": "1.4.0",
   "description": "Simple command-line file / directory server built with connect",
-  "keywords": [
-    "static",
-    "server",
-    "connect"
-  ],
-  "author": "TJ Holowaychuk <tj@vision-media.ca>",
+  "bin": {
+    "serve": "./bin/serve"
+  },
   "preferGlobal": true,
-  "homepage": "https://github.com/tj/serve",
-  "repository": "tj/serve",
+  "repository": "amio/serve",
+  "author": "TJ Holowaychuk <tj@vision-media.ca>",
   "license": "MIT",
   "dependencies": {
     "basic-auth-connect": "^1.0.0",
@@ -26,7 +23,12 @@
     "serve-static": "1.11.x",
     "stylus": "*"
   },
-  "bin": {
-    "serve": "./bin/serve"
+  "keywords": [
+    "static",
+    "server",
+    "connect"
+  ],
+  "publishConfig": {
+    "access": "public"
   }
 }
