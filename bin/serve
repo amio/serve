@@ -14,7 +14,6 @@ var basicAuth = require('basic-auth-connect')
 var open = require('opn')
 var url = require('url')
 var fs = require('fs')
-var https = require('https')
 var serveHTTPS = require('../lib/https.js')
 
 // CLI

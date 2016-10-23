@@ -1,10 +1,15 @@
+2.1.0 / 2016-10-23
+==================
+
+* Added: support http2 (thanks to @tusharmath)
+
 2.0.0 / 2016-08-10
 ==================
 
- * Removed: jade support
- * Removed: stylus support
- * Added: `-s, --https` https support
- * Added: `-o, --open` opens a browser window to this server
+* Removed: jade support
+* Removed: stylus support
+* Added: `-s, --https` https support
+* Added: `-o, --open` opens a browser window to this server
 
 1.4.0 / 2014-03-13
 ==================

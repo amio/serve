@@ -14,6 +14,7 @@
     "commander": "2.9.0",
     "compression": "^1.6.2",
     "connect": "3.4.x",
+    "http2": "^3.3.6",
     "morgan": "^1.7.0",
     "opn": "4.0.x",
     "serve-favicon": "2.3.x",
