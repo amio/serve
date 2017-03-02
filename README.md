@@ -1,5 +1,7 @@
 # @amio/serve [![npm-version][npm-badge]][npm-link]
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/amio/serve.svg)](https://greenkeeper.io/)
+
 Handy http/https server, evolved from TJ's original [serve](https://github.com/tj/serve), which inspired by nodejitsu's [http-server](https://github.com/nodejitsu/http-server).
 
 > Original `serve` is awesome, but seems lacks of maintenance these days,
